@@ -65,10 +65,9 @@ int main(){
             count_izolate++;
         }
     }
-    if (!count_izolate) fout << "nu exista noduri izolate";
-    fout << "\n\n";
+    if (!count_izolate) fout << "nu exista noduri izolate\n";
 
-    fout << "b. determinati daca graful este regular\n";
+    fout << "\nb. determinati daca graful este regular\n";
     /*
         un graf este regular daca toate varfurile au acelasi grad
     */
@@ -86,12 +85,12 @@ int main(){
 
 
 
-    fout << "c. determinati matricea distantelor\n";
+    fout << "\nc. determinati matricea distantelor\n";
 
 
     // folosim roy-floyd
     int d[100][100] = {0}; // matricea distantelor
-    int INF = 99999;
+    int INF = 99999; // nu avem cum sa avem distanta mai mare de 100 dar punem ceva mare, practic infinit
     // initializam matricea
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
@@ -100,7 +99,7 @@ int main(){
         	// daca i = j, este acelasi nod, distanta 0
         	else if (i==j) d[i][j] = 0;
         	// altfel, presupunem distanta infinita (adica nu putem ajunge acolo)
-        	else d[i][j] = INF; // nu avem cum sa avem distanta mai mare de 100 dar punem ceva mare, practic infinit
+        	else d[i][j] = INF;
 		}
     }
 
@@ -129,7 +128,17 @@ int main(){
         fout << "\n";
     }
 
-    
-    
-
+    fout << "\nd. determinati daca graful este conex\n";
+    int este_conex = 1;
+    // Daca nu avem nicio valoare INF in matricea de distante, inseamna ca graful este conex
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            if(d[i][j]==INF){
+                este_conex=0;
+                break;
+            }
+        }
+    }
+    if(este_conex) fout << "graful este conex\n";
+    else fout << "graful nu este conex\n";
 }

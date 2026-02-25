@@ -1,0 +1,10 @@
+a. determinati nodurile izolate
+nu exista noduri izolate
+
+b. determinati daca graful este regular
+graful nu este regular
+c. determinati matricea distantelor
+0 1 2 2 
+1 0 1 1 
+2 1 0 1 
+2 1 1 0 

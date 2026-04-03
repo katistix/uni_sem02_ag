@@ -1,0 +1,3 @@
+componenta 1: 1 2 3 4 5 
+componenta 2: 6 10 
+componenta 3: 7 8 9 

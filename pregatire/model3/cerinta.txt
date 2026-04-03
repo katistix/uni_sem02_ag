@@ -1,0 +1,17 @@
+Se da un graf neorientat neponderat. Sa se determine daca acest graf este aciclic. Hint: determinati daca,
+dupa o parcurgere in adancime raman muchii din graf prin care nu ati trecut. Raspunsul va fi de forma
+„DA” (graful este aciclic), respectiv „NU” (graful are cel putin un ciclu). Date de intrare:
+n m # prima linie contine numarul de noduri si numarul de muchii
+x1 y1
+x2 y2
+...
+xn yn # exista o muchie intre „x” si „y”
+Exemplu „input.txt”:
+7 7
+1 2
+2 3
+3 4
+4 1
+1 5
+5 6
+5 7

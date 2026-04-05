@@ -1,0 +1,37 @@
+Se da o configuratie de n orase (cu coordonate (X,Y) in plan) si m drumuri unidirectionale intre orase.
+Costul asociat unui drum (daca exista legatura directa) intre orasele A, respectiv B este distanta euclidiana
+intre coordonatele celor 2 orase. Un vizitator trebuie sa ajunga din orasul S in orasul F. Gasiti o solutie op
+tima dpdv al distantei totale pentru vizitator. Afisati aceasta solutie. Formatul fisierului de intrare
+este:
+n m #prima linie contine numarul de orase si numarul de legaturi intre ele
+Cx1 Cy1
+Cx2 Cy2
+...
+Cxn Cyn # coordonatele oraselor in plan
+X1 Y1
+X2 Y2
+...
+Xm Ym # muchiile, costul urmand sa fie calculat conform coordonatelor
+Exemplu „input.txt”:
+9 12 # 9 orase, 12 drumuri directe
+1 1 # coordonatele X si Y ale primului oras
+1 2 # al doilea oras...
+1 3 # etc...
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3 # al 9-lea oras are coordonatele (3, 3)
+1 2 # avem legatura directa intre orasele 1 si 2
+1 4 # intre 1 si 4...
+2 3 # etc...
+2 5
+3 6
+4 5
+4 7
+5 6
+5 8
+6 9
+7 8
+8 9 # ultima legatura este intre orasele 8 si 9
